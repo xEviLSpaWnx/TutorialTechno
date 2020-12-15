@@ -2,6 +2,7 @@ package com.evilspawn.tutorialtechno.init;
 
 import com.evilspawn.tutorialtechno.Tutorial;
 import com.evilspawn.tutorialtechno.armor.ModArmorMaterial;
+import com.evilspawn.tutorialtechno.items.PoisonApple;
 import com.evilspawn.tutorialtechno.tools.ModItemTier;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -11,7 +12,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModItems {
 
-    public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, Tutorial.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Tutorial.MOD_ID);
+
+    public static final RegistryObject<PoisonApple> POISON_APPLE = ITEMS.register("poison_apple", PoisonApple::new);
 
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
             () -> new Item(new Item.Properties().group(Tutorial.TAB)));
@@ -27,7 +30,7 @@ public class ModItems {
     public static final RegistryObject<ShovelItem> RUBY_SHOVEL = ITEMS.register("ruby_shovel",
             () -> new ShovelItem(ModItemTier.RUBY, 0.5f, -3.0f, new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<HoeItem> RUBY_HOE = ITEMS.register("ruby_hoe",
-            () -> new HoeItem(ModItemTier.RUBY, -1.0f, new Item.Properties().group(Tutorial.TAB)));
+            () -> new HoeItem(ModItemTier.RUBY,1, -1.0f,new Item.Properties().group(Tutorial.TAB)));
 
     public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet",
             () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(Tutorial.TAB)));

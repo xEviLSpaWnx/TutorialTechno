@@ -13,5 +13,7 @@
   "item.tutorial.ruby_boots": "Ruby Boots",
 
   "item.tutorial.ruby": "Ruby",
-  "block.tutorial.ruby_block": "Ruby Block"
+  "block.tutorial.ruby_block": "Ruby Block",
+
+  "item.tutorial.poison_apple": "Poison Apple"
 }
