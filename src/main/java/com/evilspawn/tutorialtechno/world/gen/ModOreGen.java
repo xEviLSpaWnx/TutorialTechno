@@ -26,10 +26,10 @@ public class ModOreGen {
         for (Biome biome : ForgeRegistries.BIOMES) {
             if (biome.getCategory() == Biome.Category.NETHER) {
                 /// NETHER ORE GENERATION
-                genOre(biome, 5, 10, 5, 80, OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.RUBY_ORE.get().getDefaultState(), 3);
+                // genOre(biome, 5, 10, 5, 80, OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.RUBY_ORE.get().getDefaultState(), 3);
             } else if (biome.getCategory() == Biome.Category.THEEND) {
                 /// THEEND ORE GENERATION
-                genOre(biome, 5, 3, 5, 80, END_STONE, ModBlocks.RUBY_ORE.get().getDefaultState(), 3);
+                // genOre(biome, 5, 3, 5, 80, END_STONE, ModBlocks.RUBY_ORE.get().getDefaultState(), 3);
             } else {
                 /// OVERWORLD ORE GENERATION
                 genOre(biome, 5, 10, 5, 35, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.RUBY_ORE.get().getDefaultState(), 5);

@@ -2,16 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "pattern":
   [
-    "xxx",
-    "xxx",
-    "xxx"
+    "ttt",
+    "txt",
+    "ttt"
   ],
   "key":
   {
     "x":
     {
       "item": "tutorial:ruby"
-    }
+    },
+    "t":
+        {
+          "tag": "tutorial:gems"
+        }
   },
   "result":
   {

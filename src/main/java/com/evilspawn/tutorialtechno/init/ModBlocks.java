@@ -1,6 +1,7 @@
 package com.evilspawn.tutorialtechno.init;
 
 import com.evilspawn.tutorialtechno.Tutorial;
+import com.evilspawn.tutorialtechno.blocks.Oven;
 import com.evilspawn.tutorialtechno.blocks.RubyBlock;
 import com.evilspawn.tutorialtechno.blocks.RubyOre;
 import net.minecraft.block.Block;
@@ -15,4 +16,6 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", RubyBlock::new);
     public static final RegistryObject<OreBlock> RUBY_ORE = BLOCKS.register("ruby_ore", RubyOre::new);
+
+    public static final RegistryObject<Block> OVEN = BLOCKS.register("oven", Oven::new);
 }
