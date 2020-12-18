@@ -3,7 +3,6 @@ package com.evilspawn.tutorialtechno.events;
 import com.evilspawn.tutorialtechno.Tutorial;
 import com.evilspawn.tutorialtechno.init.ModBlocks;
 import com.evilspawn.tutorialtechno.init.ModItems;
-import net.minecraft.client.gui.screen.inventory.CraftingScreen;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -14,10 +13,8 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.GuiOpenEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -31,7 +28,7 @@ public class ModClientEvents {
         if (player.getHeldItemMainhand().getItem() == Items.STICK) {
             Tutorial.LOGGER.info("Player jumped with a stick");
             World world = player.getEntityWorld();
-            world.setBlockState(player.func_233580_cy_().add(0, -1, 0), ModBlocks.RUBY_BLOCK.get().getDefaultState());
+            world.setBlockState(player.getPosition().add(0, -1, 0), ModBlocks.RUBY_BLOCK.get().getDefaultState());
         }
     }
 

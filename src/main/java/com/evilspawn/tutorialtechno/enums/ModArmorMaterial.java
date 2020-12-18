@@ -1,4 +1,4 @@
-package com.evilspawn.tutorialtechno.armor;
+package com.evilspawn.tutorialtechno.enums;
 
 import com.evilspawn.tutorialtechno.Tutorial;
 import com.evilspawn.tutorialtechno.init.ModItems;
@@ -76,7 +76,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
     }
 
     @Override
-    public float func_230304_f_() {
+    public float getKnockbackResistance() {
         return knockBackResistance;
     }
 }

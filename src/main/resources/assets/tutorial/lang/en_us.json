@@ -16,5 +16,7 @@
   "block.tutorial.ruby_block": "Ruby Block",
   "block.tutorial.ruby_ore": "Ruby Ore Block",
 
-  "item.tutorial.poison_apple": "Poison Apple"
+  "item.tutorial.poison_apple": "Poison Apple",
+
+  "entity.tutorial.hog": "Hog"
 }

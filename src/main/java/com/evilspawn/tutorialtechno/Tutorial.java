@@ -1,10 +1,14 @@
 package com.evilspawn.tutorialtechno;
 
+import com.evilspawn.tutorialtechno.entities.HogEntity;
 import com.evilspawn.tutorialtechno.init.ModBlocks;
+import com.evilspawn.tutorialtechno.init.ModEntityTypes;
 import com.evilspawn.tutorialtechno.init.ModItems;
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -23,12 +27,15 @@ public class Tutorial {
 
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
-
+        ModEntityTypes.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
+        DeferredWorkQueue.runLater(() -> {
+            GlobalEntityTypeAttributes.put(ModEntityTypes.HOG.get(), HogEntity.setCustomAttributes().create());
+        });
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {

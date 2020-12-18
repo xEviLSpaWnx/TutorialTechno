@@ -1,9 +1,9 @@
 package com.evilspawn.tutorialtechno.init;
 
 import com.evilspawn.tutorialtechno.Tutorial;
-import com.evilspawn.tutorialtechno.armor.ModArmorMaterial;
+import com.evilspawn.tutorialtechno.enums.ModArmorMaterial;
 import com.evilspawn.tutorialtechno.items.PoisonApple;
-import com.evilspawn.tutorialtechno.tools.ModItemTier;
+import com.evilspawn.tutorialtechno.enums.ModItemTier;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
